@@ -5,6 +5,7 @@
 
 ### Bug fixes
 -------------------------------------------------
+- fix: Docker builds use Rust 1.97 and compile the CLI package with the existing `jemalloc`, `reth` and default features, avoiding unrelated workspace binaries in the image build.
 - fix: PostgreSQL custom-table `database` overrides now create and synchronize tables in the requested schema, including shared tables declared by multiple contracts. Existing tables mistakenly created in the default schema must be moved or reindexed; data is not moved automatically. PostgreSQL schema overrides containing invalid SQL identifier characters now fail at startup.
 ### Features
 -------------------------------------------------
